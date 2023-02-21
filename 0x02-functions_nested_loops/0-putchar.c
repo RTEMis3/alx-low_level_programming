@@ -3,6 +3,7 @@
 
 /**
  * main - Entry point
+ * _putchar - writes the character c to stdout
  * Return: Always 0 (Success)
  */
 
