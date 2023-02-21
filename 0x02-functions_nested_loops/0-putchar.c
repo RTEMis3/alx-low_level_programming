@@ -1,4 +1,4 @@
-##define MAIN_H "main.h"
+#define MAIN_H "main.h"
 #include MAIN_H
 
 /**
