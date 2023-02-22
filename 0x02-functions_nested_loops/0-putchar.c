@@ -1,14 +1,11 @@
-#define MAIN_H "main.h"
-#include MAIN_H
+#include "main.h"
 
 /**
- * main - Entry point
- * _putchar - writes the character c to stdout
- * Return: Always 0 (Success)
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-
 int main(void)
-
 {
 	_putchar('_');
 	_putchar('p');
