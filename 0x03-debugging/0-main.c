@@ -10,7 +10,7 @@
  * Description: Print if a number is positive, negative or zero
  * Return: Zero value
  */
-int main(void)
+void positive_or_negative(int i)
 {
 	int i;
 
