@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
 #include "main.h"
 
 /** 
@@ -10,7 +7,7 @@
  * Description: Print if a number is positive, negative or zero
  * Return: Zero value
  */
-void positive_or_negative(int i)
+int main(void)
 {
 	int i;
 
