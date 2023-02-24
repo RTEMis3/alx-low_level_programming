@@ -31,7 +31,6 @@ void more_numbers(void)
 	id++;
 	}
 	}
-
 	_putchar('\n');
 	if (i == 15)
 	{
