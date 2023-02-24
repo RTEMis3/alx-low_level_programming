@@ -10,6 +10,7 @@ void more_numbers(void)
 	
 	count = 0;
 	id = 0;
+
 	while (count < 10)
 	{
 	i = 0;
