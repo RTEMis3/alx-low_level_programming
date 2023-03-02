@@ -36,7 +36,7 @@ int _atoi(char *s)
 	g = -g;
 	e = e * 10 + g;
 	f = 1;
-	if (s[c + 1] < '0' || s[c + 1] > '9']
+	if (s[c + 1] < '0' || s[c + 1] > '9')
 	{
 	break;
 	}
