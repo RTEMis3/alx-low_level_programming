@@ -1,5 +1,9 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define GRAPH_MIN 33
+#define GRAPH_MAX 126
 
 /**
  * main - checks the code
@@ -7,23 +11,21 @@
  */
 int main(void)
 {
-	int pass[100];
-	int i, sum, n;
+	int sum = 2772;
+	char c;
 
-	sum = 0;
 	srand(time(NULL));
-	for (i = 0; i < 100; i++)
+	while (sum > GRAPH_MAX)
 	{
-	pass[i] = rand() % 78;
-	sum += (pass[i] + '0');
-	putchar(pass[i] + '0');
-	if ((2772 - sum) - '0' < 78)
+	c = rand() % (GRAPH_MAX - GRAPH_MIN) + GRAPH_MIN;
+	sum -= c;
+	if (sum < GRAPH_MIN)
 	{
-	n = 2772 - sum - '0';
-	sum += n;
-	putchar(n + '0');
-	break;
+	c -= (GRAPH_MIN - sum);
+	sum = GRAPH_MIN;
+	putchar(c);
 	}
 	}
+	putchar(sum);
 	return (0);
 }
