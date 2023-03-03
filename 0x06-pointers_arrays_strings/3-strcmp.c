@@ -8,6 +8,7 @@
  * Return: difference of the first characters that are of diff values
  */
 int _strcmp(char *s1, char *s2)
+{
 	int j = 0;
 	int k = 0;
 
