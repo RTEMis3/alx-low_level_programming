@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * _strcat - checks the code
@@ -9,17 +10,14 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int dlen = 0, i;
+	int i;
+	int leng = strlen(src);
+	int len = strlen(dest);
 
-	while (dest[dlen])
+	for (i =0; i < leng; i++)
 	{
-	dlen++;
+	dest[len] = src[i];
+	len++;
 	}
-	for (i = 0; src[i] != 0; i++)
-	{
-	dest[dlenn] = src[i];
-	dlen++;
-	}
-	dest[dlen] = '\n';
 	return (dest);
 }
