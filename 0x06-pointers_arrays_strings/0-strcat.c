@@ -14,7 +14,7 @@ char *_strcat(char *dest, char *src)
 	int leng = strlen(src);
 	int len = strlen(dest);
 
-	for (i =0; i < leng; i++)
+	for (i = 0; i < leng; i++)
 	{
 	dest[len] = src[i];
 	len++;
