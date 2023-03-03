@@ -8,24 +8,26 @@
  */
 char *cap_string(char *s)
 {
-	int k = 0;
+	int i;
 	
-	while (s[k] != '\0')
+	if (s[0] >96 && s[0] < 123)
 	{
-	if (s[0] <= 122 && s[0] >= 97)
-	{
-	s[0] = s[0] - 32;
+	s[0] -= 32;
 	}
-	if (s[k] == 32 || s[k] == 46 || s[k] == '\t' || s[k] == '\n'
-	|| s[k] == 44 || n[k] == 59 || s[k] == '!' || s[k] == '?'
-	|| s[k] == '(' || s[k] == ')' || s[k] == '{' || s[k] == '}')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-	if (s[k + 1] <= 122 && s[k + 1] >= 97)
+	switch (s[i])
 	{
-	s[k + 1] = s[k + 1] = 32;
+	case ' ': case '\n': case '\t': case ',':
+	case ';': case '.': case '!': case '?': case '"':
+	case '(': case ')': case '{': case '}':
+	{
+	if (s[i + 1] > 96 && s[i + 1] < 123)
+	{
+	s[i + 1] -= 32;
 	}
 	}
-	k++;
+	}
 	}
 	return (s);
 }
