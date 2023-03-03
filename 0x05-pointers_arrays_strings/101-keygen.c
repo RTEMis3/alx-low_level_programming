@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define GRAPH_MIN 33
-#define GRAPH_MAX 126
 
 /**
  * main - checks the code
@@ -11,21 +9,23 @@
  */
 int main(void)
 {
-	int sum = 2772;
-	char c;
+	int pass[100];
+	int i, sum, n;
 
+	sum = 0;
 	srand(time(NULL));
-	while (sum > GRAPH_MAX)
+	for (i = 0; i < 100; i++)
 	{
-	c = rand() % (GRAPH_MAX - GRAPH_MIN) + GRAPH_MIN;
-	sum -= c;
-	if (sum < GRAPH_MIN)
+	pass[i] = rand() % 78;
+	sum += (pass [i] + '0');
+	putchar(pass[i] + '0');
+	if ((2772 - sum) - '0' < 78)
 	{
-	c -= (GRAPH_MIN - sum);
-	sum = GRAPH_MIN;
-	putchar(c);
+	n = 2772 - sum - '0';
+	sum += n;
+	putchar(n + '0');
+	break;
 	}
 	}
-	putchar(sum);
 	return (0);
 }
