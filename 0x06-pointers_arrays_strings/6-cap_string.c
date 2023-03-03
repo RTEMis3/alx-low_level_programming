@@ -9,7 +9,7 @@
 char *cap_string(char *s)
 {
 	int i;
-	
+
 	if (s[0] > 96 && s[0] < 123)
 	{
 	s[0] -= 32;
