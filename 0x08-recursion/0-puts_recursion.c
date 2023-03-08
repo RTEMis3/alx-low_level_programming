@@ -9,6 +9,7 @@
  */
 void _puts_recursion(char *s)
 {
-	_puts_recursion("Puts with recursion");
-	return (0);
+	char s;
+
+	_puts_recursion("%c\nPuts with recursion", s);
 }
