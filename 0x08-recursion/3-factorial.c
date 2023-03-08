@@ -5,7 +5,7 @@
 /**
  * factorial - returns the factorial of a given number
  * @n: character
- * Return: Alwys (0).
+ * Return: Always (0).
  */
 int factorial(int n)
 {
@@ -17,7 +17,7 @@ int factorial(int n)
 	{
 	return (-1);
 	}
-	else 
+	else
 	{
 	return (n * factorial(n - 1));
 	}
