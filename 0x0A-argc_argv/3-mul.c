@@ -8,18 +8,18 @@
  * @argc: the number of parameters
  * Return: 0.
  */
-int main(int argc, char const *argv[])
+int main(int argc, char **argv)
 {
+	int x, y;
+	
 	if (argc < 3)
 	{
 	printf("Error\n");
-	return (-1);
+	return (1);
 	}
-	else
-	{
-	int mul;
-	mul = atoi(argv[1]) = atoi(argv[2]);
-	printf("%d\n", mul);
-	}
+	
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
+	printf("%d\n", x = y);
 	return (0);
 }
