@@ -16,6 +16,7 @@ int _strlen(char *s)
 	}
 	return (i);
 }
+
 /**
  * _strcpy - copy arrays
  * @src: array of elements
@@ -24,7 +25,7 @@ int _strlen(char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 10;
+	int i = 0;
 
 	while (src[i] != '\0')
 	{
@@ -34,6 +35,7 @@ char *_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+
 /**
  * _strdup - array for prints a string
  * @str: array of elements
