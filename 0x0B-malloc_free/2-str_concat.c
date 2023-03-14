@@ -1,45 +1,40 @@
 #include "main.h"
 
 /**
- * alloc_grid - returns a pointer to a 2-dimensioanl array of intergers
- * @width: width of the grid
- * @height: height of the grid
- * Return: NULL on failure if width or height is 0 || -1 return NULL
+ * str_concat - function that concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: NULL on failure
  */
-int **alloc_grid(int width, int height)
+char *str_concat(char *s1, char *s2)
 {
-	int a, b, c;
-	int **p;
+	char *concat_str;
+	int index, concat_index = 0, len = 0;
 
-	if (width < 1 || height < 1)
+	if (s1 == NULL)
+	{
+	s1 = "";
+	}
+	if (s2 == NULL)
+	{
+	s2 = "";
+	}
+	for (index = 0; s1[index] || s2[index]; index++)
+	{
+	len++;
+	}
+	concat_str = malloc(sizeof(char) * len);
+	if (concat_str == NULL)
 	{
 	return (NULL);
 	}
-	p = malloc(sizeof(int *) * height);
-	if (p == NULL)
+	for (index = 0; s1[index]; index++)
 	{
-	free(p);
-	return (NULL);
+	concat_str[concat_index++] = s1[index];
 	}
-	for (a = 0; a < height; a++)
+	for (index = 0; s2[index]; index++)
 	{
-	p[a] = malloc(sizeof(int) * width);
-	if (p[a] == NULL)
-	{
-	for (; a >= 0 ; a--)
-	{
-	free(p[a]);
+	concat_str[concat_index++] = s2[index];
 	}
-	free(p);
-	return (NULL);
-	}
-	}
-	for (b = 0; b < height; b++)
-	{
-	for (c = 0; c < width; c++)
-	{
-	p[b][c] = 0;
-	}
-	}
-	return (p);
+	return (concat_str);
 }
