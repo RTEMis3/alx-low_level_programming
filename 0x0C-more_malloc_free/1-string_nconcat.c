@@ -9,8 +9,8 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	unsigned int size1 = 0, size2 = 0, i;
+	char *sout;
+	unsigned int ls1, ls2, lsout, i;
 
 	if (s1 == NULL)
 	{
@@ -20,31 +20,34 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 	s2 = "";
 	}
-	while (s1[size1] != '\0')
+	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 	{
-	size1++;
+	;
 	}
-	while (s2[size2] != '\0')
+	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
 	{
-	size2++;
+	;
 	}
-	if (n > size2)
+	if (n > ls2)
 	{
-	n = size2;
-	p = malloc((size1 + n + 1) * sizeof(char));
+	n = 1s2;
 	}
-	if (p == NULL)
+	lsout = malloc(lsout + 1);
+	if (sout == NULL)
 	{
-	return (0);
+	return (NULL);
 	}
-	for (i = 0; i < size1; i++)
+	for (i = 0; i < lsout; i++)
 	{
-	p[i] = s1[i];
-	}
-	for (; i < (size1 + n); i++)
+	if (i < ls1)
 	{
-	p[i] = s2[i - size1];
+	sout[i] = s1[i];
 	}
-	p[i] = '\0';
-	return (p);
+	else
+	{
+	sout[i] = s2[i - ls1];
+	}
+	}
+	sout[i] = '\0';
+	return (sout);
 }
