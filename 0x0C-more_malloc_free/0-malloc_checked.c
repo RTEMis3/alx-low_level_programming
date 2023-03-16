@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * malloc_checked - check if malloc library is assigning memories
@@ -7,10 +9,9 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *p;
+	int *p;
 
-	p = malloc(b);
-	
+	p = malloc(b);	
 	if (p == NULL)
 	{
 	exit(98);
