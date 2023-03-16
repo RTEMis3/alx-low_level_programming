@@ -1,12 +1,13 @@
 #include "main.h"
+
 /**
  * malloc_checked - check if malloc library is assigning memories
  * @b: variable
- * Return: interger
+ * Return: void
  */
 void *malloc_checked(unsigned int b)
 {
-	int *ptr;
+	void *ptr;
 	
 	ptr = malloc(b);
 	if (ptr == NULL)
